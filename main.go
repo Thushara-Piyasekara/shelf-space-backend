@@ -1,12 +1,9 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
+	"shelf-space/rest-api/internal/routes"
 )
 
 func main() {
-	router := gin.Default()
-	router.GET("/books", getBooks)
-	router.GET("/authors", getAuthors)
-	router.Run("localhost:8080")
+	routes.InitRoutes()
 }
